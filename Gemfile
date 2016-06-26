@@ -44,6 +44,7 @@ group :development, :test do
   gem "spring"
   gem "launchy"
   gem "selenium-webdriver"
+  gem "poltergeist"
   gem "rspec-rails"
   gem "rspec"
   gem "factory_girl_rails"
