@@ -24,11 +24,11 @@ RSpec.describe ItemsController, type: :controller do
   # Item. As you add validations to Item, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    attributes_for(:item)
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    attributes_for(:item, name: '')
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,14 +103,14 @@ RSpec.describe ItemsController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        attributes_for(:item)
       }
 
       it "updates the requested item" do
         item = Item.create! valid_attributes
         put :update, {:id => item.to_param, :item => new_attributes}, valid_session
         item.reload
-        skip("Add assertions for updated state")
+        expect(item).to have_attributes(item.attributes.merge(new_attributes))
       end
 
       it "assigns the requested item as @item" do
