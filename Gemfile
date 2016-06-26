@@ -35,9 +35,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
 
   gem "capybara"
-  # gem "capybara-webkit"
   gem "spring"
   gem "launchy"
   gem "selenium-webdriver"
@@ -46,6 +49,7 @@ group :development, :test do
   gem "factory_girl_rails"
   gem "factory_girl"
   gem "database_cleaner"
+  gem "ffaker"
 end
 
 group :development do
